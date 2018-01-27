@@ -37,16 +37,17 @@ namespace ATY
             if (!player) return;
             player.Power += Power;
             myCollider.enabled = false;
+            triggerFadeAnimation();
         }
 
         private void triggerFadeAnimation()
         {
-            if (beamAnimator) beamAnimator.SetBool("fade",true);
+            if (beamAnimator) beamAnimator.SetBool("Fade",true);
         }
 
         private void resetFadeAnimation()
         {
-            if (beamAnimator) beamAnimator.SetBool("fade", false);
+            if (beamAnimator) beamAnimator.SetBool("Fade", false);
         }
 
         private void OnEnable()
