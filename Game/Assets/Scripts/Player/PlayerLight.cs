@@ -48,7 +48,11 @@ namespace ATY
 
         public void Refresh()
         {
-            if (_lightObject) _lightObject.range = _power;
+            if (_lightObject)
+            {
+                _lightObject.range = _power;
+                _lightObject.spotAngle = 180f * _power / MaxPower;
+            }
         }
 
         private void PowerDecrement()
