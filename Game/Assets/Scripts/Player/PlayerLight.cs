@@ -13,8 +13,6 @@ namespace Aty
         [SerializeField]
         private float lightTimeRemaining;
 
-        private const float MaxPower = 300f;
-
         [Header("Level Light")]
         [SerializeField]
         private Light _levelLight = null;
