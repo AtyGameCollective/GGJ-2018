@@ -346,8 +346,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b1908fcccfc35488e0039e1587c0d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lightObject: {fileID: 108131359384658342}
-  _power: 300
+  LightTimeTotal: 60
+  lightTimeRemaining: 60
+  _levelLight: {fileID: 0}
+  _maxLevelLight: 300
+  _minLevelLight: 0
   _decreaseRate: 10
   OnPowerDeplete:
     m_PersistentCalls:
