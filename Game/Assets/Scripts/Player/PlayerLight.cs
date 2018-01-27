@@ -59,6 +59,7 @@ namespace Aty
         public void LevelLightUpdate(float value)
         {
             _levelLight.range = Mathf.Lerp(_minLevelLight, _maxLevelLight, value);
+            _levelLight.spotAngle = Mathf.Lerp(40, 180, value);
         }
 
         public void PlayerLightUpdate(float value)

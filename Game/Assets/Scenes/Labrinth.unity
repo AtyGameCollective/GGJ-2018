@@ -778,6 +778,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114187613463098842, guid: 0c3c5427fe41a15478e9637a48249fd7,
+        type: 2}
+      propertyPath: _power
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c3c5427fe41a15478e9637a48249fd7, type: 2}
   m_IsPrefabParent: 0
@@ -1262,8 +1267,8 @@ MonoBehaviour:
   target: {fileID: 1331169459}
   distance: {x: 0, y: 10, z: 0}
   lag: 0
-  minLimit: {x: -5000, y: -5000, z: -5000}
-  maxLimit: {x: 5000, y: 5000, z: 5000}
+  minLimit: {x: -500, y: -500, z: -500}
+  maxLimit: {x: -500, y: -500, z: -500}
 --- !u!1 &902284239
 GameObject:
   m_ObjectHideFlags: 0
@@ -1949,7 +1954,7 @@ GameObject:
   - component: {fileID: 1331169453}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
