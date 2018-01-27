@@ -29,7 +29,7 @@ namespace ATY
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.collider.CompareTag("player")) collideWith(collision.collider.GetComponent<PlayerLight>());
+            if (collision.collider.CompareTag("Player")) collideWith(collision.collider.GetComponent<PlayerLight>());
             
         }
 
