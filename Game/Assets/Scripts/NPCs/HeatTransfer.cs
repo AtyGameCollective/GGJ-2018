@@ -99,7 +99,7 @@ namespace Aty
         {
             if (other.CompareTag("Player") && player)
             {
-                player.Power += TransferRate * Time.deltaTime;
+                player.LightTimeRemaining += TransferRate * Time.deltaTime;
                 Power -= TransferRate * Time.deltaTime;
             }
         }

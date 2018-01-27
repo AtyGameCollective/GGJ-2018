@@ -32,3 +32,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Game/.vs/Game/v15/sqlite3/storage.ide

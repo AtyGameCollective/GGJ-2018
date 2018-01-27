@@ -46,7 +46,7 @@ namespace Aty
         private void collideWith(PlayerLight player)
         {
             if (!player) return;
-            player.Power += Power;
+            player.LightTimeRemaining += Power;
             myCollider.enabled = false;
             triggerFadeAnimation();
         }
