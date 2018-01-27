@@ -28,7 +28,7 @@ namespace Aty
             {
                 _power = value.Clamp(0, MaxPower);
 
-                _OnChange.Invoke(_power);
+                _OnChange.Invoke(_power/MaxPower);
                 if (_power <= 0) _OnDeplete.Invoke();
                 else if (_power >= MaxPower) _OnComplete.Invoke();
             }
