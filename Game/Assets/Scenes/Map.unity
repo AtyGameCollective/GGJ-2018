@@ -1265,6 +1265,18 @@ Prefab:
       propertyPath: Gate
       value: 
       objectReference: {fileID: 2371968}
+    - target: {fileID: 4027113934693256, guid: 87c02e1d4dbff8640a3cf5c9bf090483, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027113934693256, guid: 87c02e1d4dbff8640a3cf5c9bf090483, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027113934693256, guid: 87c02e1d4dbff8640a3cf5c9bf090483, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87c02e1d4dbff8640a3cf5c9bf090483, type: 2}
   m_IsPrefabParent: 0
