@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ATY
+namespace Aty
 {
     public static class Extensions
     {
