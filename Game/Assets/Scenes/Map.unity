@@ -284,13 +284,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 898994543}
-  m_LocalRotation: {x: 0.5579109, y: -0.011732807, z: 0.080079384, w: 0.825945}
-  m_LocalPosition: {x: -1.4335045, y: 24.6, z: -18.810236}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 67.441, y: 10.509001, z: 18.101002}
+  m_Father: {fileID: 1186806550}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!108 &898994545
 Light:
   m_ObjectHideFlags: 0
@@ -303,7 +303,7 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1.1
   m_Range: 300
-  m_SpotAngle: 115.99307
+  m_SpotAngle: 179
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -625,6 +625,7 @@ Transform:
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 2145577700}
+  - {fileID: 898994544}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -653,6 +654,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _lightObject: {fileID: 898994545}
   _power: 300
+  _decreaseRate: 10
+  OnPowerDeplete:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1298625456
 GameObject:
   m_ObjectHideFlags: 0
