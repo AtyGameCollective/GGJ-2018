@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ATY
+namespace Aty
 {
     public class PlayerLight : MonoBehaviour
     {
@@ -48,7 +48,11 @@ namespace ATY
 
         public void Refresh()
         {
-            if (_lightObject) _lightObject.range = _power;
+            if (_lightObject)
+            {
+                _lightObject.range = _power;
+                _lightObject.spotAngle = 180f * _power / MaxPower;
+            }
         }
 
         private void PowerDecrement()
