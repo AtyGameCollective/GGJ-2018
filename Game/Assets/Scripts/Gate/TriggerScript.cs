@@ -2,21 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerScript : MonoBehaviour {
+public class TriggerScript : MonoBehaviour
+{
 
-    public GameObject Gate;
-    Animator animator;
-    bool inRange = false;
+    [SerializeField] private GameObject _gate;
+    private Animator animator;
+    private bool inRange = false;
+
+    public GameObject Gate
+    {
+        get { return _gate; }
+        set { _gate = value; }
+    }
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         animator = Gate.GetComponent<Animator>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-        if(inRange)
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        if (inRange)
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
@@ -25,7 +34,7 @@ public class TriggerScript : MonoBehaviour {
 
         }
 
-	}
+    }
 
     void OnTriggerEnter(Collider other)
     {
