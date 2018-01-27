@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _power: 50
+  waitTime: 1
   beamAnimator: {fileID: 95215237328574186}
 --- !u!135 &135732687286186804
 SphereCollider:

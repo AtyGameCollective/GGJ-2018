@@ -6,8 +6,11 @@ namespace ATY
 {
     public class LightBeam : MonoBehaviour
     {
-        [SerializeField] private float    _power = 50;
-        [SerializeField] private Animator beamAnimator;
+        [SerializeField] private float    _power       = 50;
+        [SerializeField] private float    waitTime     = 1f;
+        [SerializeField] private Animator beamAnimator = null;
+
+        private float captureTime = 0;
 
         private Collider _myCollider = null;
         private Collider myCollider
@@ -29,7 +32,15 @@ namespace ATY
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player")) collideWith(other.GetComponent<PlayerLight>());
+            if (other.CompareTag("Player")) captureTime = Time.time + waitTime;
+        }
+
+        private void OnTriggerStay(Collider other)
+        {
+            if (other.CompareTag("Player") && Time.time >= captureTime)
+            {
+                collideWith(other.GetComponent<PlayerLight>());
+            }
         }
 
         private void collideWith(PlayerLight player)
