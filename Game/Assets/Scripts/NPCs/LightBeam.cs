@@ -27,10 +27,9 @@ namespace ATY
             }
         }
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnTriggerEnter(Collider other)
         {
-            if (collision.collider.CompareTag("Player")) collideWith(collision.collider.GetComponent<PlayerLight>());
-            
+            if (other.CompareTag("Player")) collideWith(other.GetComponent<PlayerLight>());
         }
 
         private void collideWith(PlayerLight player)
