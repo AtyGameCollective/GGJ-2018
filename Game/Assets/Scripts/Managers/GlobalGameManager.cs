@@ -3,11 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
+using UnityEngine.UI;
 
 namespace Aty
 {
     public class GlobalGameManager : MonoBehaviour
     {
+        [SerializeField] private Image transitionImage = null;
 
         const string MANAGER_PATH = "MANAGER";
 
@@ -44,14 +47,35 @@ namespace Aty
         {
             get
             {
+                if(!_levelManager) _levelManager = FindObjectOfType<LevelManager>();
                 return _levelManager;
             }
         }
 
         public void SwitchScene(string sceneName)
         {
+            if (transitionImage)
+            {
+                transitionImage.color = Color.clear;
+                transitionImage.enabled = true;
+                transitionImage.DOFade(1, 1).OnComplete(() => LoadScene(sceneName));
+            }
+            else
+            {
+                LoadScene(sceneName);
+            }
+        }
+
+        public void LoadScene(string sceneName)
+        {
             SceneManager.LoadScene(sceneName);
-            _levelManager = FindObjectOfType<LevelManager>();
+
+            if (transitionImage)
+            {
+                transitionImage.color = Color.black;
+                transitionImage.enabled = true;
+                transitionImage.DOFade(0, 1).OnComplete(() => transitionImage.enabled = false);
+            }
         }
     }
 }
