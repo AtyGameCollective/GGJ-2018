@@ -10,7 +10,7 @@ namespace Aty
     [RequireComponent(typeof(HeatTransfer))]
     public class TransferedLight : MonoBehaviour
     {
-        [SerializeField] private Light _light = null;
+        /*[SerializeField] private Light _light = null;
         [ContextMenuItem("Get Light Range", "GetLightRange")]
         [SerializeField] private float initialLightRange = 300;
 
@@ -54,6 +54,6 @@ namespace Aty
         private void GetLightSpotAngle()
         {
             if (_light) initialSpotAngle = _light.spotAngle;
-        }
+        }*/
     }
 }

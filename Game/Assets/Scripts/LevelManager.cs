@@ -2,20 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelManager : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    public void GameOver()
+namespace Aty
+{
+    public class LevelManager : MonoBehaviour
     {
-        Debug.Log("Game Over!");
+        public void GameOver()
+        {
+            Debug.Log("Game Over!");
+        }
     }
 }
