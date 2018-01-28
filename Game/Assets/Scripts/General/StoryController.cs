@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class StoryController : MonoBehaviour
@@ -14,6 +15,9 @@ public class StoryController : MonoBehaviour
     [SerializeField]
     float [] totalTransitionWaitTime = { 5f, 5f, 5f, 8f };
     float transitionWaitTime;
+
+    [SerializeField]
+    UnityEvent onComplete;
 
     // Use this for initialization
     void OnEnable()
@@ -70,8 +74,9 @@ public class StoryController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Go to Gameplay");
-            SceneManager.LoadScene("Gameplay");
+            if (onComplete != null)
+                onComplete.Invoke();
+
         }
         currPage = newPage;
         if(currPage < totalTransitionWaitTime.Length)
