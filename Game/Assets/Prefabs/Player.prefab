@@ -1043,6 +1043,7 @@ GameObject:
   - component: {fileID: 4896970112781332}
   - component: {fileID: 198547889015838322}
   - component: {fileID: 199038256226078632}
+  - component: {fileID: 114558198431849212}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -2274,9 +2275,10 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _OnChange:
-  - {fileID: 0}
+  - {fileID: 114701577293358356}
   - {fileID: 114142357587009686}
   - {fileID: 114489632314434670}
+  - {fileID: 114558198431849212}
 --- !u!114 &114138431020403018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2343,6 +2345,19 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+--- !u!114 &114558198431849212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1927787016552678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49932cba4776b26428f78a96c2f6272a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxParticles: 30
+  _minParticles: 0
 --- !u!114 &114701577293358356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2519,7 +2534,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1200315748
+  randomSeed: 491585292
   InitialModule:
     serializedVersion: 3
     enabled: 1
