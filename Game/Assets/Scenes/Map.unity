@@ -188,19 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8534f0b91e754bd48a502f56e2130462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _power: 0
-  _maxPower: 50
   _transferRate: -15
-  _OnComplete:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  _OnDeplete:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &136161555
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,51 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8534f0b91e754bd48a502f56e2130462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _power: 0
-  _maxPower: 50
   _transferRate: -15
-  _OnComplete:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 651136139}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 784450958}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  _OnDeplete:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!135 &651136139 stripped
-SphereCollider:
-  m_PrefabParentObject: {fileID: 135669336969132134, guid: 47b27c463f2528743a4df55d7822aa24,
-    type: 2}
-  m_PrefabInternal: {fileID: 172855694}
---- !u!1 &784450958 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1459073965631480, guid: 47b27c463f2528743a4df55d7822aa24,
-    type: 2}
-  m_PrefabInternal: {fileID: 172855694}
 --- !u!1001 &1067773046
 Prefab:
   m_ObjectHideFlags: 0
@@ -1150,6 +1094,16 @@ Prefab:
     - target: {fileID: 4027113934693256, guid: 87c02e1d4dbff8640a3cf5c9bf090483, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114240805821070150, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
+        type: 2}
+      propertyPath: _gate
+      value: 
+      objectReference: {fileID: 2371968}
+    - target: {fileID: 114240805821070150, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
+        type: 2}
+      propertyPath: _powerToOpen
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87c02e1d4dbff8640a3cf5c9bf090483, type: 2}
