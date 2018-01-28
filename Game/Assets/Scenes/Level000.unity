@@ -755,6 +755,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114240805821070150, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
+        type: 2}
+      propertyPath: _gate
+      value: 
+      objectReference: {fileID: 1713404228}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87c02e1d4dbff8640a3cf5c9bf090483, type: 2}
   m_IsPrefabParent: 0
@@ -29867,6 +29872,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114501892475520318, guid: 30833c08b2056194fbcae07376ce9df0,
+        type: 2}
+      propertyPath: OnDeplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2021224857}
+    - target: {fileID: 114501892475520318, guid: 30833c08b2056194fbcae07376ce9df0,
+        type: 2}
+      propertyPath: OnDeplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GameOver
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30833c08b2056194fbcae07376ce9df0, type: 2}
   m_IsPrefabParent: 0
@@ -33759,6 +33774,11 @@ Prefab:
 --- !u!4 &1713404227 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4431012532007984, guid: 5996a85fe4b4b7242b7fd8553aec7a99,
+    type: 2}
+  m_PrefabInternal: {fileID: 1713404226}
+--- !u!1 &1713404228 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1431691578035832, guid: 5996a85fe4b4b7242b7fd8553aec7a99,
     type: 2}
   m_PrefabInternal: {fileID: 1713404226}
 --- !u!1 &1714502356
@@ -41331,6 +41351,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 084dd3ad1aff62b459ab4a03ad770887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPaused: 0
+  isGameOver: 0
+  pausePanel: {fileID: 0}
+  gameOverPanel: {fileID: 0}
+  winPanel: {fileID: 0}
 --- !u!4 &2021224858
 Transform:
   m_ObjectHideFlags: 0
