@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class StoryController : MonoBehaviour
 {
-    SceneManager sceneManager;
     int currPage = 0;
     [SerializeField] CanvasGroup panelAlpha;
     [SerializeField] CanvasGroup menuAlpha;
@@ -91,7 +90,6 @@ public class StoryController : MonoBehaviour
     IEnumerator ChangeAlpha(CanvasGroup group, float finalAlpha, float totalTime, float waitTime = 0f)
     {
         float startAlpha = group.alpha;
-        Debug.Log("Change started");
         onTransitionCount++;
         if(waitTime > 0)
         {
@@ -109,7 +107,6 @@ public class StoryController : MonoBehaviour
         }
         group.alpha = finalAlpha;
         onTransitionCount--;
-        Debug.LogWarning("Change finished  " + onTransitionCount);
     }
 
 }

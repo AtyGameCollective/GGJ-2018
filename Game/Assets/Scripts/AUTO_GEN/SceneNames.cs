@@ -12,7 +12,6 @@ namespace Aty
  public static class SceneNames
 {
     public static readonly string Menu = "Menu";
-    public static readonly string Labrinth = "Labrinth";
     public static readonly string Level000 = "Level000";
 } 
  } 
