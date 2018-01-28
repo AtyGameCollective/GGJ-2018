@@ -22,6 +22,19 @@ namespace Aty
             }
         }
 
+        private PlayerMovement _playerMove = null;
+        private PlayerMovement playerMove
+        {
+            get
+            {
+                if (!_playerMove && playerHeat)
+                {
+                    _playerMove = playerHeat.GetComponent<PlayerMovement>();
+                }
+                return _playerMove;
+            }
+        }
+
         public float TransferRate
         {
             get         { return _transferRate; }
@@ -37,6 +50,7 @@ namespace Aty
         {
             if (other.CompareTag(Tags.Player) && playerHeat)
             {
+                if (_transferRate < 0 && !playerMove.IsGiving) return;
                 playerHeat.CurrentHeat += TransferRate * Time.deltaTime;
                 heat.CurrentHeat       -= TransferRate * Time.deltaTime;
             }

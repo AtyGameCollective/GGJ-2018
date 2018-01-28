@@ -14,14 +14,7 @@ namespace Aty
 
         public void OpenCreditsScreen()
         {
-            Debug.Log("credits");
             creditsPanel.SetActive(true);
-        }
-
-        public void QuitGame()
-        {
-            Debug.Log("quit");
-            Application.Quit();
         }
     }
 }
