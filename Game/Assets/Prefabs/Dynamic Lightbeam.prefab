@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8534f0b91e754bd48a502f56e2130462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferRate: 2
+  _transferRate: 5
 --- !u!135 &135972131479368688
 SphereCollider:
   m_ObjectHideFlags: 1
