@@ -9,12 +9,12 @@
 /// </summary>
 namespace Aty 
 { 
- public enum Layers
+ public static class Layers
 {
-    Default,
-    TransparentFX,
-    IgnoreRaycast,
-    Water,
-    UI,
+    public static readonly string Default = "Default";
+    public static readonly string TransparentFX = "TransparentFX";
+    public static readonly string IgnoreRaycast = "IgnoreRaycast";
+    public static readonly string Water = "Water";
+    public static readonly string UI = "UI";
 } 
  } 

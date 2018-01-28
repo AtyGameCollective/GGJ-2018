@@ -30,12 +30,12 @@ namespace Aty
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag(Tags.Player.ToString())) playerHeat = other.GetComponent<Heat>();
+            if (other.CompareTag(Tags.Player)) playerHeat = other.GetComponent<Heat>();
         }
 
         private void OnTriggerStay(Collider other)
         {
-            if (other.CompareTag(Tags.Player.ToString()) && playerHeat)
+            if (other.CompareTag(Tags.Player) && playerHeat)
             {
                 playerHeat.CurrentHeat += TransferRate * Time.deltaTime;
                 heat.CurrentHeat       -= TransferRate * Time.deltaTime;

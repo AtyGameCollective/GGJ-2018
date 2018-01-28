@@ -40,7 +40,7 @@ namespace CodeGeneration
 
 #line default
 #line hidden
-            this.Write(".\r\n/// </summary>\r\nnamespace Aty \r\n{ \r\n public enum ");
+            this.Write(".\r\n/// </summary>\r\nnamespace Aty \r\n{ \r\n public static class ");
 
 #line 12 "D:\Projects\Unity-T4\CodeGenerator\StringItemsGenerator.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(className));
@@ -59,14 +59,14 @@ namespace CodeGeneration
                 this.Write("    ");
 
 #line 17 "D:\Projects\Unity-T4\CodeGenerator\StringItemsGenerator.tt"
+                this.Write("public static readonly string ");
                 this.Write(this.ToStringHelper.ToStringWithCulture(item.Replace(" ", "")));
+                this.Write(" = \"");
+                this.Write(this.ToStringHelper.ToStringWithCulture(item.Replace(" ", "")));
+                this.Write("\";");
 
 #line default
 #line hidden
-                this.Write(",");
-
-//#line 17 "D:\Projects\Unity-T4\CodeGenerator\StringItemsGenerator.tt"
-                //this.Write(this.ToStringHelper.ToStringWithCulture(item));
 
 #line default
 #line hidden
