@@ -398,7 +398,6 @@ GameObject:
   - component: {fileID: 4438779045898786}
   - component: {fileID: 33123221868812180}
   - component: {fileID: 23489432467445932}
-  - component: {fileID: 95085527894979230}
   m_Layer: 0
   m_Name: Player Model
   m_TagString: Untagged
@@ -557,6 +556,7 @@ GameObject:
   - component: {fileID: 65815032903477140}
   - component: {fileID: 114563778136222172}
   - component: {fileID: 114501892475520318}
+  - component: {fileID: 95708567524179154}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3191,13 +3191,13 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &95085527894979230
+--- !u!95 &95708567524179154
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1305666894864690}
+  m_GameObject: {fileID: 1369136526912816}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 3c3f80d84275cef4a99cb52c1245ce43, type: 3}
   m_Controller: {fileID: 9100000, guid: deca7b74e5193a14fa09f358fb6803b6, type: 2}
@@ -3342,7 +3342,18 @@ MonoBehaviour:
   _currentHeat: 60
   OnDeplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: GameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   OnComplete:
@@ -3368,6 +3379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerModel: {fileID: 4438779045898786}
   rotationSpeed: 2
+  isGiving: 0
 --- !u!114 &114563778136222172
 MonoBehaviour:
   m_ObjectHideFlags: 1
