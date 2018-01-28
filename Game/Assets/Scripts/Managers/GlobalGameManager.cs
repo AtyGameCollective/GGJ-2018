@@ -28,6 +28,15 @@ namespace Aty
             }
         }
 
+        private static GlobalGameManager _GGM;
+        public static GlobalGameManager GGM
+        {
+            get
+            {
+                if (!_GGM) _GGM = Manager.GetComponent<GlobalGameManager>();
+                return _GGM;
+            }
+        }
 
         private LevelManager _levelManager = null;
         public LevelManager LevelManager
@@ -38,9 +47,10 @@ namespace Aty
             }
         }
 
-        public void SwitchScene(Scene scene)
+        public void SwitchScene(string sceneName)
         {
-            //SceneManager.LoadScene()
+            SceneManager.LoadScene(sceneName);
+            _levelManager = FindObjectOfType<LevelManager>();
         }
     }
 }
