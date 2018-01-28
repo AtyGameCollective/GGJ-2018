@@ -8,7 +8,7 @@ namespace Aty
     {
         public void LoadFirstLevel()
         {
-            GlobalGameManager.GGM.SwitchScene(SceneNames.Labrinth);
+            GlobalGameManager.GGM.SwitchScene(SceneNames.Level000);
         }
 
         public void OpenCreditsScreen()
