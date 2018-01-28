@@ -5,8 +5,8 @@ namespace Aty
     public class CameraFollow : MonoBehaviour
     {
 
-        [SerializeField]
-        Transform target = null;
+        //[SerializeField]
+        //Transform target = null;
 
         [SerializeField]
         public Vector3 distance;
@@ -18,6 +18,20 @@ namespace Aty
         [SerializeField] Vector3 maxLimit = new Vector3(+5000, +5000, +5000);
 
         Vector3[] before = null;
+
+        private Transform _target = null;
+        public Transform target
+        {
+            get
+            {
+                if (!_target)
+                {
+                    var temp = FindObjectOfType<PlayerMovement>();
+                    if (temp) _target = temp.transform;
+                }
+                return _target;
+            }
+        }
 
         private void OnEnable()
         {
