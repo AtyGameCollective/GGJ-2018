@@ -16,11 +16,5 @@ namespace Aty
         {
             creditsPanel.SetActive(true);
         }
-
-        public void QuitGame()
-        {
-            Debug.Log("quit");
-            Application.Quit();
-        }
     }
 }
