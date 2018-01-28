@@ -12,43 +12,51 @@ namespace Aty
         [SerializeField]
         float rotationSpeed = 2f;
 
+        [SerializeField]
+        bool isGiving = false;
+
         Rigidbody rb;
         float speed = 5f;
+
+        Animator phoneixAnimator;
 
         //To use on easing rotation
         float targetAngle = 0f;
         float rotationSize = 0f;
         float rotateDirection = 1f;
-
-
+        
         // Use this for initialization
         void Start()
         {
             this.rb = GetComponent<Rigidbody>();
             targetAngle = playerModel.localEulerAngles.y;
+            phoneixAnimator = transform.GetComponent<Animator>();
         }
 
         // Update is called once per frame
         void FixedUpdate()
         {
-            float verticalMovement = Input.GetAxisRaw("Vertical") * Time.deltaTime * speed;
-            float horizontalMovement = Input.GetAxisRaw("Horizontal") * Time.deltaTime * speed;
-
-            this.transform.position += new Vector3(horizontalMovement, 0, verticalMovement);
-
-            //Rotate
             float actualAngle = playerModel.localEulerAngles.y;
 
-            if (!Mathf.Approximately(0, verticalMovement) || !Mathf.Approximately(0, horizontalMovement))
+            if (!isGiving)
             {
-                float movementAngle = Mathf.Atan2(-verticalMovement, horizontalMovement) * Mathf.Rad2Deg;
+                float verticalMovement = Input.GetAxisRaw("Vertical") * Time.deltaTime * speed;
+                float horizontalMovement = Input.GetAxisRaw("Horizontal") * Time.deltaTime * speed;
 
-                if (movementAngle < 0) movementAngle = 360 + movementAngle;
+                this.transform.position += new Vector3(horizontalMovement, 0, verticalMovement);
 
-                if (!Mathf.Approximately(movementAngle, targetAngle))
+                //Rotate
+                if (!Mathf.Approximately(0, verticalMovement) || !Mathf.Approximately(0, horizontalMovement))
                 {
-                    targetAngle = movementAngle;
-                }
+                    float movementAngle = Mathf.Atan2(-verticalMovement, horizontalMovement) * Mathf.Rad2Deg;
+
+                    if (movementAngle < 0) movementAngle = 360 + movementAngle;
+
+                    if (!Mathf.Approximately(movementAngle, targetAngle))
+                    {
+                        targetAngle = movementAngle;
+                    }
+                } 
             }
 
             if (!Mathf.Approximately(actualAngle, targetAngle))
@@ -69,6 +77,34 @@ namespace Aty
                 playerModel.localEulerAngles = new Vector3(playerModel.localEulerAngles.x, YAngle, playerModel.localEulerAngles.z);
                 
             }
+
+            //Give            
+            if(Input.GetButton("Jump"))
+            {
+                isGiving = true;
+                phoneixAnimator.SetTrigger("Transmitindo");
+            }
+
+            if (!Input.GetButton("Jump") && isGiving)
+            {
+                //UnPause
+                phoneixAnimator.enabled = true;
+            }
+        }
+
+        public void WaitingGiving()
+        {
+            //Pause
+            if (Input.GetButton("Jump"))
+            {
+                phoneixAnimator.enabled = false;
+            }
+        }
+
+        public void StopGiving()
+        {
+            isGiving = false;
+            phoneixAnimator.ResetTrigger("Transmitindo");
         }
     }
 }

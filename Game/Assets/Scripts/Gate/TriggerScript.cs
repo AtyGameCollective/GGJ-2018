@@ -39,7 +39,7 @@ namespace Aty
 
             if (inRange && !isOpen)
             {
-                if (Input.GetKeyDown(KeyCode.Return))
+                if (Input.GetButtonDown("Jump"))
                 {
                     if (player.CurrentHeat >= PowerToOpen)
                     {

@@ -572,7 +572,7 @@ GameObject:
   - component: {fileID: 114138431020403018}
   - component: {fileID: 114124654822308214}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player OLD
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2385,6 +2385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerModel: {fileID: 4669738017033400}
+  rotationSpeed: 2
 --- !u!137 &137238293908694436
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
