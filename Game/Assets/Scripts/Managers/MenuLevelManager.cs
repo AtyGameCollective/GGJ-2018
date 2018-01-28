@@ -14,7 +14,6 @@ namespace Aty
 
         public void OpenCreditsScreen()
         {
-            Debug.Log("credits");
             creditsPanel.SetActive(true);
         }
 

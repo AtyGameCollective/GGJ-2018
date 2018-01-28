@@ -26,7 +26,7 @@ public class CreditsController : MonoBehaviour {
         StartCoroutine(ChangeAlpha(panelAlpha, 1, .1f));
         yield return StartCoroutine(ChangeAlpha(menuAlpha, 1, .4f));
         scrollAnimator.SetTrigger("Open");
-        yield return StartCoroutine(ChangeAlpha(contentAlpha, 1, 1f, 1f));
+        yield return StartCoroutine(ChangeAlpha(contentAlpha, 1, 1f, .5f));
     }
 
     public void Close()
@@ -36,12 +36,10 @@ public class CreditsController : MonoBehaviour {
 
     IEnumerator CloseAnimation()
     {
-        Debug.Log("Close Animation");
         yield return StartCoroutine(ChangeAlpha(contentAlpha, 0, .5f));
         scrollAnimator.SetTrigger("Close");
-        StartCoroutine(ChangeAlpha(panelAlpha, 0, .8f, .7f));
-        yield return StartCoroutine(ChangeAlpha(menuAlpha, 0, .5f, 1.2f));
-        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(ChangeAlpha(panelAlpha, 0, .8f, .4f));
+        yield return StartCoroutine(ChangeAlpha(menuAlpha, 0, .5f, .8f));
         gameObject.SetActive(false);
     }
 
