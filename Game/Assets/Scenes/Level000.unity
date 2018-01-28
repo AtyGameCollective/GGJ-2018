@@ -711,11 +711,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 2065437448}
     m_Modifications:
-    - target: {fileID: 114491779824027990, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
-        type: 2}
-      propertyPath: OnComplete.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4027113934693256, guid: 87c02e1d4dbff8640a3cf5c9bf090483, type: 2}
       propertyPath: m_LocalPosition.x
       value: 40.5
@@ -748,18 +743,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4027113934693256, guid: 87c02e1d4dbff8640a3cf5c9bf090483, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027113934693256, guid: 87c02e1d4dbff8640a3cf5c9bf090483, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027113934693256, guid: 87c02e1d4dbff8640a3cf5c9bf090483, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 198561777886589204, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
+        type: 2}
+      propertyPath: LightsModule.light
+      value: 
+      objectReference: {fileID: 170948084}
     - target: {fileID: 114240805821070150, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
         type: 2}
       propertyPath: _gate
@@ -767,34 +755,9 @@ Prefab:
       objectReference: {fileID: 1713404228}
     - target: {fileID: 114491779824027990, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
         type: 2}
-      propertyPath: OnComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114491779824027990, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
-        type: 2}
-      propertyPath: OnComplete.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114491779824027990, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
-        type: 2}
-      propertyPath: OnComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      propertyPath: OnComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114491779824027990, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
-        type: 2}
-      propertyPath: OnComplete.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_enabled
-      objectReference: {fileID: 0}
-    - target: {fileID: 114491779824027990, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
-        type: 2}
-      propertyPath: OnComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114491779824027990, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
-        type: 2}
-      propertyPath: OnComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1713404229}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87c02e1d4dbff8640a3cf5c9bf090483, type: 2}
   m_IsPrefabParent: 0
@@ -4139,6 +4102,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4426474337023412, guid: 89c595d8ca65b0344a837b22b5a8305a,
     type: 2}
   m_PrefabInternal: {fileID: 169533879}
+--- !u!108 &170948084 stripped
+Light:
+  m_PrefabParentObject: {fileID: 108212576398148712, guid: 30833c08b2056194fbcae07376ce9df0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1536238756}
 --- !u!1001 &172210043
 Prefab:
   m_ObjectHideFlags: 0
@@ -33999,6 +33967,11 @@ Transform:
 --- !u!1 &1713404228 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1431691578035832, guid: 5996a85fe4b4b7242b7fd8553aec7a99,
+    type: 2}
+  m_PrefabInternal: {fileID: 1713404226}
+--- !u!95 &1713404229 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95723025076389400, guid: 5996a85fe4b4b7242b7fd8553aec7a99,
     type: 2}
   m_PrefabInternal: {fileID: 1713404226}
 --- !u!1 &1714502356

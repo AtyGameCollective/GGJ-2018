@@ -26,6 +26,11 @@ namespace Aty
         float rotationSize = 0f;
         float rotateDirection = 1f;
         
+        public bool IsGiving
+        {
+            get { return isGiving; }
+        }
+
         // Use this for initialization
         void Start()
         {
