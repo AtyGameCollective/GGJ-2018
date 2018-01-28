@@ -21,9 +21,11 @@ GameObject:
   - component: {fileID: 4027113934693256}
   - component: {fileID: 33345590578332590}
   - component: {fileID: 65816022524977308}
+  - component: {fileID: 114491779824027990}
   - component: {fileID: 23360673534003876}
   - component: {fileID: 135016953616616002}
   - component: {fileID: 114240805821070150}
+  - component: {fileID: 114751501586538926}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -108,7 +110,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e924e9e348cc9d04da8e352c99348231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gate: {fileID: 0}
+  _gate: {fileID: 0}
+--- !u!114 &114491779824027990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1816944671892122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb66e33964f7a746a7b16aeab564682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _totalHeat: 5
+  _currentHeat: 0
+  OnDeplete:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 65816022524977308}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnChange: []
+--- !u!114 &114751501586538926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1816944671892122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8534f0b91e754bd48a502f56e2130462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transferRate: -1
 --- !u!135 &135016953616616002
 SphereCollider:
   m_ObjectHideFlags: 1
