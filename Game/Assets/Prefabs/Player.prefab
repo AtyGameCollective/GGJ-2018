@@ -3380,6 +3380,7 @@ MonoBehaviour:
   playerModel: {fileID: 4438779045898786}
   rotationSpeed: 2
   isGiving: 0
+  phoneixAnimator: {fileID: 95708567524179154}
 --- !u!114 &114563778136222172
 MonoBehaviour:
   m_ObjectHideFlags: 1
