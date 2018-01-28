@@ -16,6 +16,7 @@ namespace Aty
         {
             _manager = (GameObject)Instantiate(Resources.Load(MANAGER_PATH));
             _manager.name = "Manager";
+            DontDestroyOnLoad(_manager);
             _Manager = () => _manager;
             return _manager;
         };
