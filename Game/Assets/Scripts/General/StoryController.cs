@@ -14,7 +14,7 @@ public class StoryController : MonoBehaviour
     [SerializeField]
     float [] totalTransitionWaitTime = { 5f, 5f, 5f, 8f };
     float transitionWaitTime;
-
+    [SerializeField] Animator scrollAnimator;
     [SerializeField]
     UnityEvent onComplete;
 
@@ -34,7 +34,9 @@ public class StoryController : MonoBehaviour
     IEnumerator ShowIntro()
     {
         yield return StartCoroutine(ChangeAlpha(panelAlpha, 1, .4f));
-        yield return StartCoroutine(ChangeAlpha(menuAlpha, 1, 1f));
+        yield return StartCoroutine(ChangeAlpha(menuAlpha, 1, .4f));
+        scrollAnimator.SetTrigger("Open");
+        yield return new WaitForSeconds(.4f);
         SetPage(0);
 
         StartCoroutine(TransitionPages());
@@ -90,7 +92,6 @@ public class StoryController : MonoBehaviour
     IEnumerator ChangeAlpha(CanvasGroup group, float finalAlpha, float totalTime, float waitTime = 0f)
     {
         float startAlpha = group.alpha;
-        Debug.Log("Change started");
         onTransitionCount++;
         if(waitTime > 0)
         {
@@ -108,7 +109,6 @@ public class StoryController : MonoBehaviour
         }
         group.alpha = finalAlpha;
         onTransitionCount--;
-        Debug.LogWarning("Change finished  " + onTransitionCount);
     }
 
 }
