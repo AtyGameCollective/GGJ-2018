@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 135669336969132134}
   - component: {fileID: 23035952454763778}
   - component: {fileID: 114041233253088790}
+  - component: {fileID: 114184107121856104}
   m_Layer: 0
   m_Name: 'Dynamic Jinkx '
   m_TagString: Untagged
@@ -39,13 +40,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4632356651033354}
   - component: {fileID: 108281549535592622}
+  - component: {fileID: 114039567520553156}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4632356651033354
 Transform:
   m_ObjectHideFlags: 1
@@ -150,6 +152,21 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114039567520553156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1459073965631480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d90e2ad896d3244e8cdb224122c4bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxRange: 300
+  _minRange: 0
+  _maxSpotAngle: 10
+  _minSpotAngle: 0
 --- !u!114 &114041233253088790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -161,10 +178,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8534f0b91e754bd48a502f56e2130462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _power: 0
-  _maxPower: 50
-  _transferRate: -15
-  _OnComplete:
+  _transferRate: -1
+--- !u!114 &114184107121856104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1207168981869398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb66e33964f7a746a7b16aeab564682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _totalHeat: 10
+  _currentHeat: 0
+  OnDeplete:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnComplete:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 135669336969132134}
@@ -178,24 +211,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1459073965631480}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _OnDeplete:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  _OnChange:
+  - {fileID: 114039567520553156}
 --- !u!135 &135669336969132134
 SphereCollider:
   m_ObjectHideFlags: 1

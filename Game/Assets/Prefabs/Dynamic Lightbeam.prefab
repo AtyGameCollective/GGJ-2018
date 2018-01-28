@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4126153061942444}
   - component: {fileID: 108746332311895194}
+  - component: {fileID: 114660030303362690}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -37,7 +38,7 @@ GameObject:
   - component: {fileID: 4747383330731042}
   - component: {fileID: 135972131479368688}
   - component: {fileID: 114736501443166156}
-  - component: {fileID: 114263482625941314}
+  - component: {fileID: 114589880751633592}
   m_Layer: 0
   m_Name: Dynamic Lightbeam
   m_TagString: Untagged
@@ -108,7 +109,7 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114263482625941314
+--- !u!114 &114589880751633592
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -116,32 +117,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1456173716225628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24fd1fb288f53cf44a0d82135a271b96, type: 3}
+  m_Script: {fileID: 11500000, guid: bdb66e33964f7a746a7b16aeab564682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _light: {fileID: 108746332311895194}
-  initialLightRange: 300
-  initialSpotAngle: 10
---- !u!114 &114736501443166156
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1456173716225628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8534f0b91e754bd48a502f56e2130462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _power: 200
-  _maxPower: 200
-  _transferRate: 15
-  _OnComplete:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  _OnDeplete:
+  _totalHeat: 60
+  _currentHeat: 60
+  OnDeplete:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 135972131479368688}
@@ -157,6 +138,40 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  OnComplete:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnChange:
+  - {fileID: 114660030303362690}
+--- !u!114 &114660030303362690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1375534411940756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d90e2ad896d3244e8cdb224122c4bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxRange: 300
+  _minRange: 0
+  _maxSpotAngle: 10
+  _minSpotAngle: 0
+--- !u!114 &114736501443166156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1456173716225628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8534f0b91e754bd48a502f56e2130462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transferRate: 2
 --- !u!135 &135972131479368688
 SphereCollider:
   m_ObjectHideFlags: 1
