@@ -8,12 +8,24 @@ namespace Aty
     {
         [SerializeField]
         Transform playerModel;
+
+        [SerializeField]
+        float rotationSpeed = 2f;
+
         Rigidbody rb;
         float speed = 5f;
+
+        //To use on easing rotation
+        float targetAngle = 0f;
+        float rotationSize = 0f;
+        float rotateDirection = 1f;
+
+
         // Use this for initialization
         void Start()
         {
             this.rb = GetComponent<Rigidbody>();
+            targetAngle = playerModel.localEulerAngles.y;
         }
 
         // Update is called once per frame
@@ -23,9 +35,39 @@ namespace Aty
             float horizontalMovement = Input.GetAxisRaw("Horizontal") * Time.deltaTime * speed;
 
             this.transform.position += new Vector3(horizontalMovement, 0, verticalMovement);
+
+            //Rotate
+            float actualAngle = playerModel.localEulerAngles.y;
+
             if (!Mathf.Approximately(0, verticalMovement) || !Mathf.Approximately(0, horizontalMovement))
             {
-                playerModel.localEulerAngles = new Vector3(playerModel.localEulerAngles.x, Mathf.Atan2(-verticalMovement, horizontalMovement) * Mathf.Rad2Deg, playerModel.localEulerAngles.z);
+                float movementAngle = Mathf.Atan2(-verticalMovement, horizontalMovement) * Mathf.Rad2Deg;
+
+                if (movementAngle < 0) movementAngle = 360 + movementAngle;
+
+                if (!Mathf.Approximately(movementAngle, targetAngle))
+                {
+                    targetAngle = movementAngle;
+                }
+            }
+
+            if (!Mathf.Approximately(actualAngle, targetAngle))
+            {
+                rotateDirection = 1f;
+
+                float angleStep = (targetAngle - actualAngle);
+
+                if (Mathf.Abs(actualAngle - targetAngle) > 180)
+                {
+                    rotateDirection = -1f;
+                    angleStep += (angleStep % 180);
+                }
+
+                angleStep = angleStep * rotateDirection * rotationSpeed * Time.deltaTime;
+                float YAngle = actualAngle + angleStep;
+                
+                playerModel.localEulerAngles = new Vector3(playerModel.localEulerAngles.x, YAngle, playerModel.localEulerAngles.z);
+                
             }
         }
     }
