@@ -6,6 +6,7 @@ namespace Aty
 {
     public class MenuLevelManager :  LevelManager
     {
+        [SerializeField] GameObject creditsPanel;
         public void LoadFirstLevel()
         {
             GlobalGameManager.GGM.SwitchScene(SceneNames.Labrinth);
@@ -14,6 +15,7 @@ namespace Aty
         public void OpenCreditsScreen()
         {
             Debug.Log("credits");
+            creditsPanel.SetActive(true);
         }
 
         public void QuitGame()

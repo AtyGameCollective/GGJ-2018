@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class StoryController : MonoBehaviour
 {
-    SceneManager sceneManager;
     int currPage = 0;
     [SerializeField] CanvasGroup panelAlpha;
     [SerializeField] CanvasGroup menuAlpha;
