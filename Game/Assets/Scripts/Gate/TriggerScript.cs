@@ -53,7 +53,7 @@ namespace Aty
 
         void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player"))
+            if (other.CompareTag(Tags.Player.ToString()))
             {
                 inRange = true;
                 player = other.GetComponent<Heat>();
@@ -62,7 +62,7 @@ namespace Aty
 
         void OnTriggerExit(Collider other)
         {
-            if (other.CompareTag("Player")) inRange = true;
+            if (other.CompareTag(Tags.Player.ToString())) inRange = true;
         }
     }
 
