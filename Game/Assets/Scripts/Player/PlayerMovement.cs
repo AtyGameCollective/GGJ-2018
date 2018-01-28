@@ -18,6 +18,7 @@ namespace Aty
         Rigidbody rb;
         float speed = 5f;
 
+        [SerializeField]
         Animator phoneixAnimator;
 
         //To use on easing rotation
@@ -30,7 +31,7 @@ namespace Aty
         {
             this.rb = GetComponent<Rigidbody>();
             targetAngle = playerModel.localEulerAngles.y;
-            phoneixAnimator = transform.GetComponent<Animator>();
+            if(!phoneixAnimator) phoneixAnimator = transform.GetComponent<Animator>();
         }
 
         // Update is called once per frame
