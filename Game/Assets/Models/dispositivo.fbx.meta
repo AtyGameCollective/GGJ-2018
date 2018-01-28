@@ -1,0 +1,158 @@
+fileFormatVersion: 2
+guid: 7def58b8822896e43b7f4e9670e57513
+timeCreated: 1517175299
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Camera
+    100002: Ddispositivo
+    100004: //RootNode
+    100006: Engrenagem1
+    100008: Engrenagem2
+    100010: Engrenagem3
+    100012: Lamp
+    100014: Liquido
+    100016: Point
+    100018: Vidro
+    400000: Camera
+    400002: Ddispositivo
+    400004: //RootNode
+    400006: Engrenagem1
+    400008: Engrenagem2
+    400010: Engrenagem3
+    400012: Lamp
+    400014: Liquido
+    400016: Point
+    400018: Vidro
+    2000000: Camera
+    2100000: Liquido
+    2100002: Vidro
+    2100004: Engrenagens
+    2100006: Dispositivo
+    2300000: Ddispositivo
+    2300002: Engrenagem1
+    2300004: Engrenagem2
+    2300006: Engrenagem3
+    2300008: Liquido
+    2300010: Vidro
+    3300000: Ddispositivo
+    3300002: Engrenagem1
+    3300004: Engrenagem2
+    3300006: Engrenagem3
+    3300008: Liquido
+    3300010: Vidro
+    4300000: Liquido
+    4300002: Vidro
+    4300004: Engrenagem3
+    4300006: Engrenagem2
+    4300008: Engrenagem1
+    4300010: Ddispositivo
+    7400000: Liquido|Evaporando
+    7400002: Liquido|Girando Eng1
+    7400004: Liquido|Girando Eng2
+    7400006: Liquido|Girando Eng3
+    7400008: Liquido|LiquidoAction
+    7400010: Engrenagem3|Evaporando
+    7400012: Engrenagem3|Girando Eng1
+    7400014: Engrenagem3|Girando Eng2
+    7400016: Engrenagem3|Girando Eng3
+    7400018: Engrenagem3|LiquidoAction
+    7400020: Engrenagem2|Evaporando
+    7400022: Engrenagem2|Girando Eng1
+    7400024: Engrenagem2|Girando Eng2
+    7400026: Engrenagem2|Girando Eng3
+    7400028: Engrenagem2|LiquidoAction
+    7400030: Engrenagem1|Evaporando
+    7400032: Engrenagem1|Girando Eng1
+    7400034: Engrenagem1|Girando Eng2
+    7400036: Engrenagem1|Girando Eng3
+    7400038: Engrenagem1|LiquidoAction
+    7400040: Ddispositivo|Evaporando
+    7400042: Ddispositivo|Girando Eng1
+    7400044: Ddispositivo|Girando Eng2
+    7400046: Ddispositivo|Girando Eng3
+    7400048: Ddispositivo|LiquidoAction
+    9500000: //RootNode
+    10800000: Lamp
+    10800002: Point
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -398,6 +398,7 @@ GameObject:
   - component: {fileID: 4438779045898786}
   - component: {fileID: 33123221868812180}
   - component: {fileID: 23489432467445932}
+  - component: {fileID: 95603262212734796}
   m_Layer: 0
   m_Name: Player Model
   m_TagString: Untagged
@@ -2848,7 +2849,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1369136526912816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.65, y: 1.33, z: -8.39}
+  m_LocalPosition: {x: 4.3, y: 1.33, z: -24.67}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 4438779045898786}
@@ -3007,7 +3008,7 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1369136526912816}
   m_Enabled: 0
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -3191,6 +3192,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &95603262212734796
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1305666894864690}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 72ac93cb137f4454b8cf83157ec350a5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &95708567524179154
 Animator:
   serializedVersion: 3
@@ -3236,7 +3254,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.88235295, g: 0.24985082, b: 0.14273354, a: 1}
   m_Intensity: 1
-  m_Range: 300
+  m_Range: 200
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -3323,7 +3341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d90e2ad896d3244e8cdb224122c4bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxRange: 300
+  _maxRange: 200
   _minRange: 0
   _maxSpotAngle: 180
   _minSpotAngle: 0
