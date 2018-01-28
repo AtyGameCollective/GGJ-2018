@@ -1,0 +1,313 @@
+fileFormatVersion: 2
+guid: 3c3f80d84275cef4a99cb52c1245ce43
+timeCreated: 1517139676
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature [Asas]
+    100002: Armature [Corpo]
+    100004: Asa
+    100006: barriga
+    100008: Bone
+    100010: Bone_end
+    100012: cabeca
+    100014: cabeca_end
+    100016: Camera
+    100018: canela.l
+    100020: canela.r
+    100022: Corpo
+    100024: coxa.l
+    100026: coxa.r
+    100028: Fita azul
+    100030: Fita verde
+    100032: Lamp
+    100034: Lamp.001
+    100036: pe.l
+    100038: pe.l_end
+    100040: pe.r
+    100042: pe.r_end
+    100044: peito
+    100046: pescoco.a
+    100048: pescoco.b
+    100050: //RootNode
+    100052: rabo
+    100054: rabo_end
+    100056: wing.a.l
+    100058: wing.a.r
+    100060: wing.b.l
+    100062: wing.b.r
+    100064: wing.c.l
+    100066: wing.c.l_end
+    100068: wing.c.r
+    100070: wing.c.r_end
+    400000: Armature [Asas]
+    400002: Armature [Corpo]
+    400004: Asa
+    400006: barriga
+    400008: Bone
+    400010: Bone_end
+    400012: cabeca
+    400014: cabeca_end
+    400016: Camera
+    400018: canela.l
+    400020: canela.r
+    400022: Corpo
+    400024: coxa.l
+    400026: coxa.r
+    400028: Fita azul
+    400030: Fita verde
+    400032: Lamp
+    400034: Lamp.001
+    400036: pe.l
+    400038: pe.l_end
+    400040: pe.r
+    400042: pe.r_end
+    400044: peito
+    400046: pescoco.a
+    400048: pescoco.b
+    400050: //RootNode
+    400052: rabo
+    400054: rabo_end
+    400056: wing.a.l
+    400058: wing.a.r
+    400060: wing.b.l
+    400062: wing.b.r
+    400064: wing.c.l
+    400066: wing.c.l_end
+    400068: wing.c.r
+    400070: wing.c.r_end
+    2000000: Camera
+    2100000: Base Phoenix
+    2100002: Material.002
+    2100004: Material.003
+    2100006: Asas
+    2300000: Fita azul
+    2300002: Fita verde
+    3300000: Fita azul
+    3300002: Fita verde
+    4300000: Corpo
+    4300002: Fita azul
+    4300004: Fita verde
+    4300006: Asa
+    7400000: Armature [Corpo]|Voando
+    7400002: Armature [Corpo]|Transmitindo
+    7400004: Armature [Asas]|Transmitindo
+    7400006: Armature [Asas]|Voando
+    9500000: //RootNode
+    10800000: Lamp
+    10800002: Lamp.001
+    13700000: Asa
+    13700002: Corpo
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Asas
+    second: {fileID: 2100000, guid: c9170fc00842f2041ae185d3eee208bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base Phoenix
+    second: {fileID: 2100000, guid: 71a58065afef8da4aba4b7d1f9acaefa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 4b057238bd3739f49ab9f3ccc2844ba0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: acc8b5205c7deee4f80f911091c8884e, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature [Corpo]|Voando
+      takeName: Armature [Corpo]|Armature [Corpo]Action
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature [Corpo]|Transmitindo
+      takeName: Armature [Corpo]|Transmitindo
+      firstFrame: 0
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature [Asas]|Transmitindo
+      takeName: Armature [Asas]|Transmitindo
+      firstFrame: 0
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature [Asas]|Voando
+      takeName: Armature [Asas]|Voando
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
