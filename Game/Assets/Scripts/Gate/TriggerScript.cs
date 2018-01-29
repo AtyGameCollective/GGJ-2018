@@ -9,7 +9,8 @@ namespace Aty
 
         [SerializeField] private GameObject _gate;
         [SerializeField] private int _powerToOpen;
-
+        [SerializeField] Animator triggerAnimator;
+        [SerializeField] string triggerAnimationName;
         private Heat player = null;
         private Animator animator;
         private bool inRange = false;
@@ -45,6 +46,10 @@ namespace Aty
                     {
                         player.CurrentHeat -= PowerToOpen;
                         animator.SetTrigger("OpenGate");
+                        if(triggerAnimator != null && triggerAnimationName != null)
+                        {
+                            triggerAnimator.SetTrigger(triggerAnimationName);
+                        }
                         isOpen = true;
                     }
                 }
