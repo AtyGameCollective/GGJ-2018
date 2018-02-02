@@ -184,7 +184,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8534f0b91e754bd48a502f56e2130462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferRate: -1
+  _transferRate: -3
 --- !u!114 &114184107121856104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -271,7 +271,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdb66e33964f7a746a7b16aeab564682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _totalHeat: 10
+  InvokeOnChangeAtOnEnable: 1
+  _totalHeat: 9
   _currentHeat: 0
   OnDeplete:
     m_PersistentCalls:
@@ -321,8 +322,11 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _OnChange:
-  - {fileID: 114039567520553156}
+  OnDecomplete:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!135 &135669336969132134
 SphereCollider:
   m_ObjectHideFlags: 1
