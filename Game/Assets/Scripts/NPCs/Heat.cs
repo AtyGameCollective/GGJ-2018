@@ -13,10 +13,10 @@ namespace Aty
 
         [Header("Events")]
 
-        [SerializeField] private UnityEvent OnDeplete  = new UnityEvent();
-        [SerializeField] private UnityEvent OnComplete = new UnityEvent();
-        [SerializeField] private UnityEvent OnChange   = new UnityEvent();
-
+        [SerializeField] private UnityEvent OnDeplete    = new UnityEvent();
+        [SerializeField] private UnityEvent OnComplete   = new UnityEvent();
+        [SerializeField] private UnityEvent OnChange     = new UnityEvent();
+        [SerializeField] private UnityEvent OnDecomplete = new UnityEvent();
 
         public float TotalHeat
         {
@@ -36,7 +36,11 @@ namespace Aty
                 var formerValue = _currentHeat;
                 _currentHeat    = value.Clamp(0, _totalHeat);
 
-                if (formerValue  != _currentHeat && OnChange   != null) OnChange.Invoke();
+                if (formerValue != _currentHeat)
+                {
+                    if (OnChange != null)                                  OnChange.Invoke();
+                    if (formerValue == _totalHeat && OnDecomplete != null) OnDecomplete.Invoke();
+                }
                 if (_currentHeat <= 0            && OnDeplete  != null) OnDeplete.Invoke();
                 if (_currentHeat >= _totalHeat   && OnComplete != null) OnComplete.Invoke();
             }
