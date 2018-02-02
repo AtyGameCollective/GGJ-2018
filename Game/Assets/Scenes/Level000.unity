@@ -17746,16 +17746,6 @@ Prefab:
       propertyPath: LightsModule.light
       value: 
       objectReference: {fileID: 170948084}
-    - target: {fileID: 82929043678882066, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
-        type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82554254059585382, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
-        type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87c02e1d4dbff8640a3cf5c9bf090483, type: 2}
   m_IsPrefabParent: 0
@@ -20999,6 +20989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdb66e33964f7a746a7b16aeab564682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InvokeOnChangeAtOnEnable: 0
   _totalHeat: 1000
   _currentHeat: 1000
   OnDeplete:
