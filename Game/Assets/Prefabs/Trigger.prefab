@@ -110,7 +110,6 @@ GameObject:
   - component: {fileID: 114917848882427138}
   - component: {fileID: 23393717299762368}
   - component: {fileID: 135762175151295970}
-  - component: {fileID: 114020962083370332}
   - component: {fileID: 114761302719634888}
   m_Layer: 0
   m_Name: Trigger
@@ -927,21 +926,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxParticles: 30
   _minParticles: 0
---- !u!114 &114020962083370332
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1351882098052316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e924e9e348cc9d04da8e352c99348231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gate: {fileID: 1683852935781400}
-  _powerToOpen: 0
-  triggerAnimator: {fileID: 95370965730927982}
-  triggerAnimationName: On
 --- !u!114 &114761302719634888
 MonoBehaviour:
   m_ObjectHideFlags: 1
