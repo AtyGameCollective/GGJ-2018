@@ -48,9 +48,5 @@ namespace Aty
 
         public float Percent { get { return _currentHeat / _totalHeat; } }
 
-        private void OnEnable()
-        {
-            if (OnChange != null) OnChange.Invoke();
-        }
     }
 }
