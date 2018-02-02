@@ -7,6 +7,9 @@ namespace Aty
 {
     public class Heat : MonoBehaviour
     {
+        [Tooltip("If marked as true, the OnChange event is called every time this object is Enabled")]
+        [SerializeField] private bool  InvokeOnChangeAtOnEnable = false;
+
         [Header("Properties")]
         [SerializeField] private float _totalHeat = 60f;
         [SerializeField] private float _currentHeat = 0f;
@@ -47,6 +50,11 @@ namespace Aty
         }
 
         public float Percent { get { return _currentHeat / _totalHeat; } }
+
+        private void OnEnable()
+        {
+            if (InvokeOnChangeAtOnEnable && OnChange != null) OnChange.Invoke();
+        }
 
     }
 }
