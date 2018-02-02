@@ -20,12 +20,12 @@ namespace Aty
         [SerializeField] private float _maxParticles = 30f;
         [SerializeField] private float _minParticles = 0f;
 
-        public override void OnHeatChange(float value)
+        public override void OnHeatChange(Heat heat)
         {
             if (!particles) return;
 
             var emission = particles.emission;
-            emission.rateOverTime = (value * _maxParticles).Clamp(_minParticles, _maxParticles);
+            emission.rateOverTime = (heat.Percent * _maxParticles).Clamp(_minParticles, _maxParticles);
 
         }
 

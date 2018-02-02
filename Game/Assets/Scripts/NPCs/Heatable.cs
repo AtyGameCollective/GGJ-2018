@@ -7,6 +7,7 @@ namespace Aty
     [System.Serializable]
     public abstract class Heatable : MonoBehaviour
     {
-        public abstract void OnHeatChange(float percent);
+        //public abstract void OnHeatChange(float percent);
+        public abstract void OnHeatChange(Heat heat);
     }
 }

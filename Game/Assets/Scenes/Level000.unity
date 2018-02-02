@@ -17705,6 +17705,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 2065437448}
     m_Modifications:
+    - target: {fileID: 114917848882427138, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
+        type: 2}
+      propertyPath: OnComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4027113934693256, guid: 87c02e1d4dbff8640a3cf5c9bf090483, type: 2}
       propertyPath: m_LocalPosition.x
       value: 40.5
@@ -17746,6 +17751,31 @@ Prefab:
       propertyPath: LightsModule.light
       value: 
       objectReference: {fileID: 170948084}
+    - target: {fileID: 114917848882427138, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
+        type: 2}
+      propertyPath: OnComplete.m_PersistentCalls.m_Calls.Array.data[5].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114917848882427138, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
+        type: 2}
+      propertyPath: OnComplete.m_PersistentCalls.m_Calls.Array.data[5].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114917848882427138, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
+        type: 2}
+      propertyPath: OnComplete.m_PersistentCalls.m_Calls.Array.data[5].m_Target
+      value: 
+      objectReference: {fileID: 1713404230}
+    - target: {fileID: 114917848882427138, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
+        type: 2}
+      propertyPath: OnComplete.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 114917848882427138, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
+        type: 2}
+      propertyPath: OnComplete.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87c02e1d4dbff8640a3cf5c9bf090483, type: 2}
   m_IsPrefabParent: 0
@@ -36384,6 +36414,91 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1713095494}
+--- !u!1 &1713404228 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1683852935781400, guid: 87c02e1d4dbff8640a3cf5c9bf090483,
+    type: 2}
+  m_PrefabInternal: {fileID: 852473109}
+--- !u!82 &1713404230
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1713404228}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3913157802d34b54e9a2a5306313a99e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1714502356
 GameObject:
   m_ObjectHideFlags: 0

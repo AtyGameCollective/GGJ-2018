@@ -625,6 +625,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1444853823824378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4481893116988978}
+  - component: {fileID: 108776463463139756}
+  - component: {fileID: 114458065080904924}
+  m_Layer: 0
+  m_Name: Level Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1447466723155538
 GameObject:
   m_ObjectHideFlags: 1
@@ -2272,6 +2289,19 @@ Transform:
   m_Father: {fileID: 4353091125296610}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4481893116988978
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444853823824378}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalScale: {x: 0.83333325, y: 0.8333337, z: 0.8333337}
+  m_Children: []
+  m_Father: {fileID: 4873032685793660}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!4 &4495826987138368
 Transform:
   m_ObjectHideFlags: 1
@@ -2855,6 +2885,7 @@ Transform:
   - {fileID: 4438779045898786}
   - {fileID: 4819545016603232}
   - {fileID: 4689378183949780}
+  - {fileID: 4481893116988978}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3252,7 +3283,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8455882, g: 0.41250297, b: 0.21761462, a: 1}
   m_Intensity: 1
   m_Range: 30
   m_SpotAngle: 30
@@ -3315,6 +3346,42 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!108 &108776463463139756
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444853823824378}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 0
+  m_Color: {r: 0.64705884, g: 0.64705884, b: 0.64705884, a: 1}
+  m_Intensity: 1.1
+  m_Range: 100
+  m_SpotAngle: 50
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!114 &114042538102984262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3345,6 +3412,21 @@ MonoBehaviour:
   _minRange: 0
   _maxSpotAngle: 180
   _minSpotAngle: 0
+--- !u!114 &114458065080904924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444853823824378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d90e2ad896d3244e8cdb224122c4bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxRange: 200
+  _minRange: 0
+  _maxSpotAngle: 70
+  _minSpotAngle: 40
 --- !u!114 &114501892475520318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3379,12 +3461,72 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  OnChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114083053480535754}
+        m_MethodName: OnHeatChange
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 114501892475520318}
+          m_ObjectArgumentAssemblyTypeName: Aty.Heat, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114042538102984262}
+        m_MethodName: OnHeatChange
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 114501892475520318}
+          m_ObjectArgumentAssemblyTypeName: Aty.Heat, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114986704741413078}
+        m_MethodName: OnHeatChange
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 114501892475520318}
+          m_ObjectArgumentAssemblyTypeName: Aty.Heat, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114862994049223394}
+        m_MethodName: OnHeatChange
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 114501892475520318}
+          m_ObjectArgumentAssemblyTypeName: Aty.Heat, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114458065080904924}
+        m_MethodName: OnHeatChange
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 114501892475520318}
+          m_ObjectArgumentAssemblyTypeName: Aty.Heat, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _OnChange:
   - {fileID: 114083053480535754}
   - {fileID: 114042538102984262}
   - {fileID: 114986704741413078}
   - {fileID: 114862994049223394}
-  - {fileID: 0}
+  - {fileID: 114458065080904924}
 --- !u!114 &114554426261514056
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -10,9 +10,9 @@ namespace Aty
         [Header("Fog Color")]
         [SerializeField] private Gradient fogGradient = new Gradient();
 
-        public override void OnHeatChange(float value)
+        public override void OnHeatChange(Heat heat)
         {
-            RenderSettings.fogColor = fogGradient.Evaluate(value);
+            RenderSettings.fogColor = fogGradient.Evaluate(heat.Percent);
         }
     }
 }

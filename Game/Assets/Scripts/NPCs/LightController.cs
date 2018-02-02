@@ -24,12 +24,12 @@ namespace Aty
         [SerializeField] private float _maxSpotAngle = 180f;
         [SerializeField] private float _minSpotAngle = 0f;
 
-        public override void OnHeatChange(float percent)
+        public override void OnHeatChange(Heat heat)
         {
             if (!myLight) return;
 
-            myLight.range     = (percent * _maxRange    ).Clamp(_minRange,     _maxRange);
-            myLight.spotAngle = (percent * _maxSpotAngle).Clamp(_minSpotAngle, _maxSpotAngle);
+            myLight.range     = (heat.Percent * _maxRange    ).Clamp(_minRange,     _maxRange);
+            myLight.spotAngle = (heat.Percent * _maxSpotAngle).Clamp(_minSpotAngle, _maxSpotAngle);
         }
     }
 }
