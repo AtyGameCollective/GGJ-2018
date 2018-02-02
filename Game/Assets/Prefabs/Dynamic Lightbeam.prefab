@@ -123,7 +123,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 0
-  MaxDistance: 0.5
+  MaxDistance: 1
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -280,8 +280,22 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _OnChange:
-  - {fileID: 114660030303362690}
+  OnDecomplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 82811319359111274}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114660030303362690
 MonoBehaviour:
   m_ObjectHideFlags: 1
